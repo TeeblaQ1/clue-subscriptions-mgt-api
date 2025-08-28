@@ -94,7 +94,7 @@ User with email admin@company.com already exists.
 
 ### Base URL
 ```
-http://localhost:5000
+http://localhost:8000
 ```
 
 ### Authentication
@@ -463,7 +463,7 @@ Authorization: Bearer <your_jwt_token>
 
 ##### 1. Register a new user:
 ```bash
-curl -X POST http://localhost:5000/api/register \
+curl -X POST http://localhost:8000/api/register \
   -H "Content-Type: application/json" \
   -d '{
     "email": "test@example.com",
@@ -473,7 +473,7 @@ curl -X POST http://localhost:5000/api/register \
 
 ##### 2. Login:
 ```bash
-curl -X POST http://localhost:5000/api/login \
+curl -X POST http://localhost:8000/api/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "test@example.com",
@@ -483,7 +483,7 @@ curl -X POST http://localhost:5000/api/login \
 
 ##### 3. Subscribe to a plan (replace TOKEN with actual token):
 ```bash
-curl -X POST http://localhost:5000/api/subscriptions/subscribe \
+curl -X POST http://localhost:8000/api/subscriptions/subscribe \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer TOKEN" \
   -d '{
@@ -494,7 +494,7 @@ curl -X POST http://localhost:5000/api/subscriptions/subscribe \
 
 ##### 4. Get active subscription:
 ```bash
-curl -X GET http://localhost:5000/api/subscriptions/active \
+curl -X GET http://localhost:8000/api/subscriptions/active \
   -H "Authorization: Bearer TOKEN"
 ```
 
@@ -516,7 +516,7 @@ curl -X GET http://localhost:5000/api/subscriptions/active \
 ```python
 import requests
 
-base_url = "http://localhost:5000"
+base_url = "http://localhost:8000"
 
 # Register
 response = requests.post(f"{base_url}/api/register", json={
