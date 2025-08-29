@@ -21,10 +21,10 @@
 
 ## Tests
 1. Using virtual environments (activate the virtual environment) and run the command below
-2. Using docker (exec into the container) and run the command below
-
     `pytest tests`
-
+2. Using docker (exec into the container) and run the command below
+    `docker compose exec api pytest tests`
+    
 ## DB
 If the DATABASE_URL is not set in the env file, it defaults to a SQLIite db
 
